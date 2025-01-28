@@ -8,7 +8,7 @@
     android:background="#D6FFFFFF"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".HomePage">
+    tools:context=".pages.HomePage">
 
     <TextView
         android:id="@+id/textView"
@@ -21,11 +21,11 @@
         android:textSize="22sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/messagesRecyclerView"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:paddingBottom="8dp" />
+        android:padding="8dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
