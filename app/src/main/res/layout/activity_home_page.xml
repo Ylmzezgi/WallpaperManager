@@ -38,15 +38,21 @@
             android:layout_height="34dp"
             android:text="Galeriye Erişim"
             android:textColor="#0B0909"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
+            android:id="@+id/galleryId"
             android:layout_width="38dp"
+            android:onClick="galleryOnClick"
             android:layout_height="34dp"
+            android:layout_marginEnd="12dp"
             android:src="@drawable/baseline_arrow_forward_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textView1"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -89,7 +95,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/fourthButton"
+            android:id="@+id/widgethButton"
             android:layout_width="41dp"
             android:layout_height="37dp"
             android:layout_marginStart="24dp"

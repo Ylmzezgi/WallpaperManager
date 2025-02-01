@@ -1,10 +1,10 @@
-package com.ezgiyilmaz.wallpapermanager
+package com.ezgiyilmaz.wallpapermanager.service
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitService {
-    private const val BASE_URL = "https://api.nasa.gov/"
+    private const val BASE_URL = "BASE_URL"
 
     val instance: GetService by lazy {
         Retrofit.Builder()

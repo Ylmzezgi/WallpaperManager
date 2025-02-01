@@ -1,4 +1,4 @@
-package com.ezgiyilmaz.wallpapermanager
+package com.ezgiyilmaz.wallpapermanager.service
 
 import com.ezgiyilmaz.wallpapermanager.model.Wallpaper
 import retrofit2.Call
