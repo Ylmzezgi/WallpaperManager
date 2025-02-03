@@ -39,13 +39,14 @@ class HomePage : AppCompatActivity() {
         setContentView(binding.root)
 
         registerLauncher()
-        binding.widgethButton.setOnClickListener{
+
+        binding.widgetButton.setOnClickListener{
             startActivity(Intent(this,WidgetsPage::class.java))
         }
 
         binding.recyclerView.layoutManager = GridLayoutManager(this, 3)
 
-        RetrofitService.instance.getWallpapers("key",18)
+        RetrofitService.instance.getWallpapers("your_key",18)
             .enqueue(object : Callback<List<Wallpaper>> {
                 override fun onResponse(
                     call: Call<List<Wallpaper>>,
@@ -53,15 +54,11 @@ class HomePage : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful) {
                         response.body()?.let { wallpapers ->
-                            val photoWallpapers = wallpapers.filter {
-                                it.url!!.endsWith(".jpg") || it.url.endsWith(".png") || it.url.endsWith(".jpeg")
-                            }
+                            val photoWallpapers = wallpapers
 
                             if (photoWallpapers.isNotEmpty()) {
                                 adapter = WallpapersAdapter(photoWallpapers)
                                 binding.recyclerView.adapter = adapter
-                            } else {
-                                Log.e("HomePage", "Gelen veriler fotoğraf değil.")
                             }
                         }
                     }

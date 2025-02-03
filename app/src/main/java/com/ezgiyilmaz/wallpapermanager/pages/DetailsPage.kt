@@ -67,16 +67,6 @@ class DetailsPage : AppCompatActivity() {
         dialog.show()
     }
 
-//    private fun setWallpaper(imageView: ImageView) {
-//        try {
-//            val bitmap = (imageView.drawable as BitmapDrawable).bitmap
-//            val wallpaperManager = WallpaperManager.getInstance(applicationContext)
-//            wallpaperManager.setBitmap(bitmap)
-//            Toast.makeText(this, "Duvar kağıdı başarıyla ayarlandı!", Toast.LENGTH_SHORT).show()
-//        } catch (e: Exception) {
-//            Toast.makeText(this, "Duvar kağıdı ayarlanırken hata oluştu!", Toast.LENGTH_SHORT).show()
-//        }
-//    }
     private fun setWallpaper(imageView: ImageView, isLockScreen: Boolean = false) {
         try {
             // Görseli ImageView'den Bitmap olarak al

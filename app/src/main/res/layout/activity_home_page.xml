@@ -95,7 +95,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/widgethButton"
+            android:id="@+id/widgetButton"
+            android:onClick="widgetOnClick"
             android:layout_width="41dp"
             android:layout_height="37dp"
             android:layout_marginStart="24dp"
